@@ -1,0 +1,77 @@
+:root {
+    --main-color: #EEE0C9;
+    --sec-color: #765827;
+}
+
+body {
+    background-color: var(--main-color);
+    color: var(--sec-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-weight: 600;
+}
+
+textarea {
+    resize: none;
+}
+
+
+#addProductBtn,
+#updateProductBtn {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #765827;
+    color: #F8F0E5;
+}
+
+.box {
+    box-shadow: -5px 2px 54px -9px rgba(200, 174, 125, 1);
+    border-radius: 20px;
+}
+
+.table {
+    --bs-table-color-type: var(--sec-color);
+    --bs-table-bg-type: #F8F0E5;
+    --bs-table-border-color: var(--sec-color);
+}
+
+.cstm-btn {
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#deleteBtn {
+    color: var(--main-color);
+    background-color: #F55050;
+}
+
+#updateBtn {
+    color: var(--sec-color);
+    background-color: #FFD966;
+}
+
+p {
+    margin: 0;
+}
+
+.allProducts {
+    width: 40%;
+    padding: 10px;
+    color: var(--main-color);
+    background-color: var(--sec-color);
+    border-radius: 10px;
+}
+
+::selection {
+    background-color: var(--sec-color);
+    color: var(--main-color);
+}
+
+.form-control:focus {
+    border-color: var(--sec-color);
+    box-shadow: 0 0 0 0.25rem rgba(118, 88, 39, 0.25);
+}
