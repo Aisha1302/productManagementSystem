@@ -191,7 +191,7 @@ function validateName() {
 }
 
 function validateModel() {
-    let regex = /^(tv|laptop|mobile)$/;
+    let regex = /^(tv|labtop|mobile)$/;
 
     if (regex.test(productModel.value.toLowerCase()) == true) {
         productModel.classList.add("is-valid");
