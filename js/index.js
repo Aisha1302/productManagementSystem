@@ -1,14 +1,14 @@
-//! select inputs
+//& select inputs
 let productName = document.querySelector("#productName");
 let productModel = document.querySelector("#productModel");
 let productPrice = document.querySelector("#productPrice");
 let productDesc = document.querySelector("#productDesc");
 
-//!select buttons
+//& select buttons
 let addProductBtn = document.querySelector("#addProductBtn");
 let updateProductBtn = document.querySelector("#updateProductBtn");
 
-// ! select msg
+// & select msg
 let invalidName = document.getElementById("invalidName");
 let invalidPrice = document.getElementById("invalidPrice");
 let invalidModel = document.getElementById("invalidModel");
@@ -112,7 +112,7 @@ function resetInputs() {
 // DELETE PRODUCT FROM THE ARRAY AND LOCALSTPRAGE
 function deleteProduct(i) {
     productList.splice(i, 1);  //delete from the array
-    localStorage.product = JSON.stringify(productList); //set changes in localstorage
+    localStorage.setItem("productList", JSON.stringify(productList)); //set changes in localstorage
     display();
 }
 
@@ -223,7 +223,7 @@ function validatePrice() {
 }
 
 function validateDesc() {
-    let regex = /^([a-zA-Z]|\s){25,}$/gm;
+    let regex = /^.{25,}[\s,]*$/;
 
     if (regex.test(productDesc.value) == true) {
         productDesc.classList.add("is-valid");
